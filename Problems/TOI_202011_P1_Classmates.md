@@ -1,6 +1,4 @@
----
 Tags: DFS, Disjoint Set並查集, TOI,
----
 # 同學 (Classmates)
 
 ``TOI 202011 練習賽 潛力組 第一題``
