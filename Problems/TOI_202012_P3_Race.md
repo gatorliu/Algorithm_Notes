@@ -1,7 +1,6 @@
----
+<!--
 Tags: 動態規劃, Sparse table, Segment Tree, TOI,
-
----
+-->
 # 賽車 (Race)
 
 ``TOI 202012 練習賽 潛力組 第三題``

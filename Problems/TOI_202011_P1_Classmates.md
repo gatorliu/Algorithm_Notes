@@ -1,10 +1,13 @@
+<!--
+Tags: DFS, Disjoint Set並查集, TOI,
+-->
 # 同學 (Classmates)
 
 ``TOI 202011 練習賽 潛力組 第一題``
 
 ## 題目(pdf)  
 * [TOI提供](https://toi-reg.csie.ntnu.edu.tw/question/202011/Classmates.pdf)  
-* [TOI備份](source\Classmates.pdf)  
+* [TOI備份](source/Classmates.pdf)  
 
 ## 解題重點
 * 連通分量（Connected Component）: 簡單的說就是點連接在一起，也就是成為一組
