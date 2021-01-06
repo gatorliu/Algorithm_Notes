@@ -87,6 +87,7 @@ int main()
 }
 
 ```
+
 ### 動態規劃
 考慮加入動態規劃時，架構要做些許調整。  
 
@@ -100,3 +101,4 @@ int main()
 * [TOI官網提供](https://toi-reg.csie.ntnu.edu.tw/question/202012/Zipline.cpp)
 * [TOI備份(加入註解)](source\Zipline_toi.cpp)
 * [DFS無動態規劃版本(TLE)](source\Zipline.cpp)
+
