@@ -1,6 +1,5 @@
 ---
 Tags: DFS, Disjoint Set並查集, TOI,
-
 ---
 # 同學 (Classmates)
 
