@@ -1,3 +1,4 @@
+Tags: 前綴和, 離散化, Segment Tree,TOI,
 # 著色 (Coloting)
 
 ``TOI 202010 練習賽 潛力組 第三題``
