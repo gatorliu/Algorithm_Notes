@@ -1,18 +1,17 @@
----
+<!--
 Tags: DFS, Disjoint Set並查集, TOI,
-
----
+-->
 # 同學 (Classmates)
 
 ``TOI 202011 練習賽 潛力組 第一題``
 
 ## 題目(pdf)  
 * [TOI提供](https://toi-reg.csie.ntnu.edu.tw/question/202011/Classmates.pdf)  
-* [TOI備份](source\Classmates.pdf)  
+* [TOI備份](source/Classmates.pdf)  
 
 ## 解題重點
 * 連通分量（Connected Component）: 簡單的說就是點連接在一起，也就是成為一組
-  * 可以用 Disjoint SET, BFS  BFS 都可以。
+  * 可以用 Disjoint SET, DFS  BFS 都可以。
 
 * 判斷連通分量是否有環，有兩種解法:
   1. 本題使用關於「樹（tree）」的特性判斷，因為無向圖為樹若且唯若它不存在環。而且，一棵樹除了自己的父節點之外，不會再碰到其他已經走訪過的節點。所以如果碰到了表示存在環。

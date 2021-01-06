@@ -42,11 +42,12 @@
 <script>
 	
 	var baseUrl = ''
-	var init_mdpath  = baseUrl + 'mdhome/index.md'
+	var init_mdpath  = baseUrl + 'MDHome/index.md'
 	var toc = []
 	var title=''
 
-	var [ URL,  mdpath] = getMDPath() 
+	var [ URL,  mdpath] = getMDPath() 	
+
 	if (mdpath=='') {
 		mdpath= init_mdpath
 	}
@@ -56,7 +57,7 @@
 
   </script>
   <div class="footer">
-  <a  href="mdhome/index.md">INDEX</a>
+  <a  href="?MDHome/index.md">INDEX</a>
 </div>
 </body>
 </html>
