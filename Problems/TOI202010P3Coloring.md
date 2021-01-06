@@ -1,6 +1,6 @@
----
+
 Tags: 前綴和, 離散化, Segment Tree,TOI,
----
+
 
 # 著色 (Coloting)
 
