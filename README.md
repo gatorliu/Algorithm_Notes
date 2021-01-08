@@ -12,7 +12,7 @@ Please visit : [https://gatorliu.github.io/Algorithm_Notes](https://gatorliu.git
 
 #### 1. 注意MD語法:
 
-　　* 開頭不能用 hackmd 加入參數的方式: `---` ...mulit-lines ... `---`  
+　　* 開頭不能用 hackmd 加入參數的方式([YAML metadata](https://hackmd.io/s/yaml-metadata-tw)): `---` ...mulit-lines ... `---`  
 改用 `\<!--` ...mulit-lines ... `-->`
 
 
@@ -26,3 +26,8 @@ Please visit : [https://gatorliu.github.io/Algorithm_Notes](https://gatorliu.git
 
   * 在 `gh-pages` breach 下加一個  .nojekyll 的空白文件
 
+#### 我採用的方法：
+  * Disable Jekyll
+  * 開頭用　`\<!--　-->` `--- ---` 就都可以了。
+    `\<!--　--> `：　MD的註解方式。
+	`--- ---`: MD的第二階標題，但放在開頭當作`YAML metadata`
