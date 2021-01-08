@@ -7,13 +7,13 @@ using namespace std;
 int n, m, h[N];
 int cnt[N]={0};	  // counter : 從 index 到 n 點的最長路徑總數  
 int dis[N];		  // distance: 從 index 到 n 點的最長路徑	
-int used[N]={0};  // 紀錄是否已經算過 1 :算過
+int used[N]={0};  // 紀錄是否subtree已經都算完了(設為1)
 vector<int> g[N];
 
 void dfs(int u)
 {
 	if(used[u]) return;
-	dis[u] = 0;				// init dis[] = 0，應該可以不在這邊做(定義時 int dis[N] = {0};)
+	dis[u] = 0;				// init dis[u] = 0，應該可以不在這邊做(定義時 int dis[N] = {0};)
 	if(u == n)				// 走到終點
 	{
 		cnt[u] = 1;					// 將終點count設定為 1，應該可以在 initial 時設定 cnt[n]=1;
