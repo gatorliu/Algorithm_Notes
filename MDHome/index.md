@@ -1,6 +1,8 @@
 # 演算法筆記
 
 
+## Tips
+* [StringStream](../Tips/StringStream.md)
 
 ## 資訊奧林匹亞問題
 
