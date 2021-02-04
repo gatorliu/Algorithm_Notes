@@ -1,6 +1,15 @@
 ---
 Tags: Tips, INPUT OUTPUT
 ---
+`重點整理:`
+``` c++
+1. #include <sstream> // include
+2. getline(cin, str);  // 一次讀一行
+3.  <<, >>             // Operators使用
+4. ss.str(""); ss.clean(); // Reuse stringstream
+```
+
+
 # StringStream
 
 `ioStream` 是將 input/output 當作 Stream 
@@ -10,8 +19,8 @@ Tags: Tips, INPUT OUTPUT
 簡單來講，它就是一個流水線，你可以從任何地方放東西進去、然後再把裡面的東西拿出來到任何地方。[1]:
 
 
-## StringStream 範例:
-### int to String:
+## StringStream 範例
+### int to String( or string to int)
 ``` c++
 #include <sstream>
 using namespace std;
@@ -26,7 +35,7 @@ int main()
     
     ss >> str; // 相當於cin, 把 ss 中值，以stream方式輸入 str
     
-    cout<< str <<endl;//顯示output=1234;
+    cout<< str << endl;//顯示output=1234;
 }
 ```
 *　為什麼可以這樣，想想 cin/cout 也可以自動判斷string/int 呀!!
@@ -39,28 +48,21 @@ int main()
 #include <iostream>
 #include <sstream> // include stringstream
 #include <string>
-
 using namespace std;
 int main()
 {
     string str;
-    cin >> str; // 輸入 "1 2 3";
+    getline(cin, str); // 輸入 1 2 3 4 5，一次讀一行
     
     stringstream sInOut; // 設個 stringstream , 類似 iostream 的 cin/cout 
-    sInOut << str;       // 相當於cout, 只是cout是將 str輸出到 console
-                         // 這裡是輸出到 sInOut中
-    
-    int arr[10] ={0};
-    int idx = 0;
-    while(sInOut >> idx) { // 相當於cin, 把 sInOut中值，以stream方式輸入 arr
-        cout << idx << '\n';
+    sInOut << str;       // 相當於cout, 只是cout是將 str 輸出到 console
+                         // 這裡是輸出到 sInOut中    
+    int val;
+    int sum = 0;
+    while(sInOut >> val) { // 相當於cin, 把 sInOut中值，以stream方式輸入 arr
+        sum += val;
     }
-    /*
-    for (int i = 0; i<=idx; i++) 
-        cout << arr[i] << '\n';
-        */
-    
-  
+    cout << sum << '\n'; // 輸出 6
 }
 ```
 ### 針對stringstream類別的初始化

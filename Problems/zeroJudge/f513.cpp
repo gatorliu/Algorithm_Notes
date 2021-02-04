@@ -4,6 +4,11 @@
 #include <vector>
 using namespace std;
 
+/*----------------------------------------------------------------
+計算周圍8個位置與中間都不同的數目
+--*/
+
+
 
 int out(vector< vector<int> >M, int x, int y) {
    for (int i=-1; i<=1 ;i++ ) {
