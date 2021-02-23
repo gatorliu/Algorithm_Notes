@@ -8,14 +8,12 @@
 #include <vector>
 #include <queue>
 #include <set>
+using namespace std;
 
 
 typedef long long ll;
-#define key first
-#define value second
-
-
-using namespace std;
+#define f first
+#define s second
 
 int main() {
     ios::sync_with_stdio(0);cin.tie(0);

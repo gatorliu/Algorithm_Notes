@@ -1,11 +1,14 @@
 # 演算法筆記
 
 
+
+## algorithms
+* [單調隊列 Monotoen Queue](../Algorithm/MonotoneQueue.md)
+
 ## Tips
 * [StringStream](../Tips/StringStream.md)
 
 ## 資訊奧林匹亞問題
-
 ### TOI
 * [TOI_202012_P2 空中鋼索](../Problems/TOI_202012_P2_Zipline.md)
 * [TOI_202012_P3 賽車](../Problems/TOI_202012_P3_Race.md)
