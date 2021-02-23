@@ -1,11 +1,16 @@
 # 演算法筆記
 
 
+
+## Algorithms
+* [單調隊列 Monotoen Queue](../Algorithm/MonotoneQueue.md)
+* [LIS 最長遞增子序列](../Algorithm/LIS.md)
+
 ## Tips
 * [StringStream](../Tips/StringStream.md)
+* [& Symbol](../Tips/AndSymbol.md)
 
 ## 資訊奧林匹亞問題
-
 ### TOI
 * [TOI_202012_P2 空中鋼索](../Problems/TOI_202012_P2_Zipline.md)
 * [TOI_202012_P3 賽車](../Problems/TOI_202012_P3_Race.md)
