@@ -102,7 +102,8 @@ arr = {7 6 3 5 1 3 2 }
 
 * [b151: NOIP2004 2.合并果子](https://zerojudge.tw/ShowProblem?problemid=b151)
     * NOIP2004提高組
-    * 還有其他解法。不一定要用單調隊列(其實新堆必定單調，所以可以直接用Queue)。
+    * 可以從排序好的序列中取最小的合併，在放回序列。 O(NlogN)
+    * 單調隊列解法: 考慮合併後，放在一個新隊列(其實新堆必定單調，所以可以直接用Queue)。
 
 ## 參考：
 * [单调队列及其应用](https://www.cnblogs.com/neverforget/archive/2011/10/13/ll.html)

@@ -1,4 +1,4 @@
-// https://zerojudge.tw/ShowProblem?problemid=???
+// https://zerojudge.tw/ShowProblem?problemid=a457
 // #include <bits/stdc++.h>
 #include <iostream>
 
@@ -17,6 +17,9 @@ typedef long long ll;
 
 int main() {
     ios::sync_with_stdio(0);cin.tie(0);
+    ll k, m = 20000000000;
+
+    cout << m;
 
     return 0;
 }

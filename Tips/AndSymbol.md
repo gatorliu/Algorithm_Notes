@@ -14,7 +14,7 @@ C++ 的 **`&`** 有很多意義！！
 
 * Bitwise operation
 ``` c++
- (3 & 2) == 1 // (0b11 & 0b10) == 0b01
+ (3 & 2) == 2 // (0b11 & 0b10) == 0b10
 ```
 *  Address-of Operator (在一個**變數**前)
 ```c++
@@ -34,6 +34,28 @@ b = 5;  // a == 5
 ```
 
 ## 討論　Reference
+
+* Case 1
+
+```c++
+    int arr[]={1,2,3,4};
+    
+    for (int i=0; i<4 ; i++) {
+        int a = arr[i];
+        a += 10;
+    }                             // arr[] =  1 2 3 4
+    
+    for (int i=0; i<4 ; i++) {    
+        int &a = arr[i];          // 重要!!  如果用一個需要改變Arr[i]的值，記得 `&`
+        a += 10;
+    }                             // arr[] = 11 12 13 14
+    
+    for (auto  a :arr ) a += 10;  // 11 12 13 14  
+    for (auto &a :arr ) a += 10;  // 21 22 23 24  記得 `&`
+```
+
+* Case 2 
+
 ```c++
 struct A {
   int val;
@@ -48,11 +70,11 @@ void F2(A &b) {
 int main()
 {
     A a = {1}; 
-    cout << a.val << endl;
+    cout << a.val << endl;  // 1
     F1(a);
-    cout << a.val << endl;
+    cout << a.val << endl;  // 1
     F2(a);
-    cout << a.val << endl;
+    cout << a.val << endl;  // 2
 }
 ```
 
