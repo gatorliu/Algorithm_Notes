@@ -2,11 +2,13 @@
 
 
 
-## algorithms
+## Algorithms
 * [單調隊列 Monotoen Queue](../Algorithm/MonotoneQueue.md)
+* [LIS 最長遞增子序列](../Algorithm/LIS.md)
 
 ## Tips
 * [StringStream](../Tips/StringStream.md)
+* [& Symbol](../Tips/AndSymbol.md)
 
 ## 資訊奧林匹亞問題
 ### TOI

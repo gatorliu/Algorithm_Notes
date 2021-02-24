@@ -62,7 +62,7 @@ int main()
     while(sInOut >> val) { // 相當於cin, 把 sInOut中值，以stream方式輸入 arr
         sum += val;
     }
-    cout << sum << '\n'; // 輸出 6
+    cout << sum << '\n'; // 輸出 15
 }
 ```
 ### 針對stringstream類別的初始化
