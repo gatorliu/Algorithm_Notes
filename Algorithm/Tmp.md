@@ -101,13 +101,13 @@ $$
 
 **逆序對**(數字排列未按照順序)數目比較普遍的方法是利用歸併排序做到$$\displaystyle{ O(n\log n)}$$的時間複雜度。
 
-就是計算要交換的次數。 
+就是計算要交換的次數。  
 [merge_sort.cpp](source/merge_sort.cpp)  
 [merge_sort_vector.cpp](source/merge_sort_vector.cpp)
 
 
-
  1. 2020年10月APCS 4. 低地距離
+
 ```
 Q:
 3 1 2 1 3 2
@@ -120,6 +120,7 @@ Ans: 4
 ```
 
   2. TOI2010 第五題：餐廳評鑑 
+
 ```
 Q1:
 3 7 5 5 8
