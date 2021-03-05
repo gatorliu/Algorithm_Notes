@@ -1,5 +1,16 @@
 # 臨時筆記
 
+[TOI (初選) 歷屆考題](https://yuihuang.com/toi-pre/)
+
+## GCD 最大公因數
+
+``` c++
+int gcd (int x, int y) {
+    if (y == 0) return x;
+    return gcd(y, x%y);
+}
+```
+
 ## 離散法
 常用
 
@@ -11,91 +22,172 @@ $$ X_0= 0, X_1=1, X_2=1, X_3=2, ...  $$
 
 $$
 \left[\begin{matrix}
-X_{n+1} \\\\
 X_{n} \\\\
+X_{n+1} \\\\
 \end{matrix}
 \right]
 \\\\
 =
 \\\\
 \left[\begin{matrix}
+0 & 1 \\\\
 a & b \\\\
-1 & 0 \\\\
 \end{matrix}
 \right]^n
 \\\\
 \dot
 \\\\
 \left[\begin{matrix}
-X_1 \\\\
 X_0 \\\\
+X_1 \\\\
 \end{matrix}
 \right]
 \\\\
-$$ 
+=
+\\\\
+\left[\begin{matrix}
+0 & 1 \\\\
+a & b \\\\
+\end{matrix}
+\right]^{n-1}
+\\\\
+\dot
+\\\\
+\left[\begin{matrix}
+X_1 \\\\
+X_2 \\\\
+\end{matrix}
+\right]
+\\\\
+$$
 
+
+$$
+\left[\begin{matrix}
+X_{n}  & 0 \\\\
+X_{n+1} & 0\\\\
+\end{matrix}
+\right]
+\\\\
+=
+\\\\
+\left[\begin{matrix}
+0 & 1 \\\\
+a & b \\\\
+\end{matrix}
+\right]^{n-1}
+\\\\
+\dot
+\\\\
+\left[\begin{matrix}
+X_1  & 0 \\\\
+X_2  & 0 \\\\
+\end{matrix}
+\right]
+\\\\
+$$
+
+----------------------------------------------------------------
 
 $$ 
 Q^2 \\\\
 = 
 \left[\begin{matrix}
-a & b \\\\
-1 & 0 \\\\
+0 & 1 \\\\
+2 & 3 \\\\
 \end{matrix}
 \right]^2
 \\\\
 =
 \left[\begin{matrix}
-a & b \\\\
-1 & 0 \\\\
+0 & 1 \\\\
+1 & 3 \\\\
 \end{matrix}
 \right]
 \\\\
 \dot
 \\\\
 \left[\begin{matrix}
-a & b \\\\
-1 & 0 \\\\
+0 & 1 \\\\
+2 & 3 \\\\
 \end{matrix}
 \right]
 \\\\
 =
 \\\\
 \left[\begin{matrix}
-(a\*a + b\*1)  & (a\*b + b\*0) \\\\
-(1\*a + 0\*1) & (1\*b + 0\*0) \\\\
+(0\*0 + 1\*2)  & (0\*1 + 1\*3) \\\\
+(2\*0 + 3\*2) & (2\*1 + 3\*3) \\\\
 \end{matrix}
 \right]
 $$
 
+```c++
+  struct mat{
+    int a[2][2];
+  };
+  
+  mat Q1 = {{{00, 01},{10, 11}}}; 
+  mat Q2 = {{{00, 01},{10, 11}}}; 
+
+  mat mat_dot(mat Q2, mat Q1) {
+    mat ret; 
+
+    for (int i = 0; i < 2; i++){
+        for (int j = 0; j < 2; j++){
+            for (int k = 0; k < 2; k++){
+                ret.a[i][j] =  Q1.a[i][k] * Q2.a[k][j];
+            }
+        }
+    }
+    return ret;
+ } 
+```
+
 ### 三維
 $$
 \left[\begin{matrix}
-X_{n+2} \\\\
-X_{n+1} \\\\
 X_{n} \\\\
+X_{n+1} \\\\
+X_{n+2} \\\\
 \end{matrix}
 \right]
 \\\\
 =
 \\\\
 \left[\begin{matrix}
-a & b & c \\\\
-1 & 0 & 0 \\\\
+0 & 0 & 1 \\\\
 0 & 1 & 0 \\\\
+a & b & c \\\\
 \end{matrix}
 \right]^{n}
 \\\\
 \dot
 \\\\
 \left[\begin{matrix}
-X_2 \\\\
-X_1 \\\\
 X_0 \\\\
+X_1 \\\\
+X_2 \\\\
 \end{matrix}
 \right]
 $$
 
+### 快速冪
+
+$$ X = Q^n * X $$
+
+```c++
+mat pow(mat Q, int n, mat X) {
+  while(n) {
+    if (n & 1)  // n % 2 == 1
+      X = P * X
+
+    P  = P * P;
+    n >>=1 ; // n = n / 2
+  }
+  return X; 
+}
+```
 
 ## 逆序對
 
@@ -105,6 +197,19 @@ $$
 [merge_sort.cpp](source/merge_sort.cpp)  
 [merge_sort_vector.cpp](source/merge_sort_vector.cpp)
 
+``` c++
+int count_inversion(int a[], int n)  //bubble sort O(N^2)
+{
+    int count = 0;
+    for(int i = 0; i < n - 1; ++i)
+        for(int j = i + 1; j < n; ++j)
+            if(a[i] > a[j]) {
+              count += 1;
+              // swap here
+            }
+    return count;
+}
+```
 
  1. 2020年10月APCS 4. 低地距離
 
@@ -144,5 +249,3 @@ Ans: 2
  : 4 7 6 7 7
  : 4 6 7 7 7  二次
 ```
-
-
