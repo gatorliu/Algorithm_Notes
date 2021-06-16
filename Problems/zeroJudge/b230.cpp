@@ -32,7 +32,7 @@ int main() {
     int k;
 
     while(cin >> k)
-    cout << *next(S.begin(), k -1) << endl;
+        cout << *next(S.begin(), k -1) << endl;
     
 
     return 0;
