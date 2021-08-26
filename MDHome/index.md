@@ -6,6 +6,8 @@
 * [單調隊列 Monotoen Queue](../Algorithm/MonotoneQueue.md)
 * [LIS 最長遞增子序列](../Algorithm/LIS.md)
 * [線段樹](../Algorithm/SegmentTree.md)
+* [稀疏表](../Algorithm/SparseTable.md)
+* [Hash Function](../Algorithm/HashFunction.md)
 * [臨時筆記](../Algorithm/Tmp.md)
 
 ## Tips

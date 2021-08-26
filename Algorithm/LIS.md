@@ -34,7 +34,7 @@ length: | length| 1 | 1 | 2 | 3 | 3 | 1 | 1 | 4 | 4 | 5 |
 $$O(N log(N)) $$
 
 ### 說明：
-* 用　vector L 紀錄，最遞增數列長度是 idx+1時的最小數值:
+* 用　vector L 紀錄，最長遞增數列長度是 idx+1時的最小數值:
  1. 若L是空，則 push_back(至少LIS = 1)
  2. 若L不是空，
     1. 新數值v可以往後接(數字最大)， 則 push_back

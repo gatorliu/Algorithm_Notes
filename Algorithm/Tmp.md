@@ -11,6 +11,42 @@ int gcd (int x, int y) {
 }
 ```
 
+## O(1)空間 O(N)時間 找 ROOT 
+ZJ b967 可以不TLE REF: https://zerojudge.tw/ShowThread?postid=25613&reply=0
+
+假設：　有Ｎ個nodes （0 ~ N-1)，　一行行輸入　a(child)  b(parent) 兩個值
+
+* 方法一：
+    ``` c++
+    long long root = N(N-1)/2;     // (編號 0加到N-1)  :: logn long
+    for (int i=1; i<N; i++) { 
+        cin >> a >> b;　
+        .....
+        root -= b ;
+    }
+    ```
+* 方法二： 改良自方法一 
+    ``` c++
+    long root = N-1;            
+    for (int i=0; i<N-1; i++) {  // N-1 個連接，　i 從0開始
+        cin >> a >> b;
+        .....
+        root += i - b;          // i (0 加到　N-2)  減去出現的 b ,　所以  root = N-1開始
+    }
+    ```
+
+* 方法三：   原理來自方法二　與XOR
+    ``` c++
+    int root = N-1;           // root = N-1    int即可
+    for (int i=0; i<N-1; i++) {  // N-1 個連接，　i 從0開始
+        cin >> a >> b;
+        .....
+        root ^= i ^ b;      // 有點像方法二　 a^b^c == abs( a - abs(b-c)) Why work??
+                            // 但過程中 root值不一樣，最終root 是對的
+    }
+    ```
+
+
 ## 離散法
 常用
 
